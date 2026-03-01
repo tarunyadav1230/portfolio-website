@@ -64,10 +64,20 @@
     </div>
 </section>
 
-<section id="contact">
-    <h2>Contact</h2>
-    <p>Email: your-mspg1456@gmail.com</p>
-    <a href="mailto:your-mspg1456@gmail.com" class="btn">Contact Me</a>
+<section id="contact" class="reveal">
+    <h2>Contact Me</h2>
+
+    <form action="https://formspree.io/f/mjgedjgw" method="POST" class="contact-form">
+
+        <input type="text" name="name" placeholder="Your Name" required>
+
+        <input type="email" name="email" placeholder="Your Email" required>
+
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+
+        <button type="submit" class="btn">Send Message</button>
+
+    </form>
 </section>
 <script>
     function reveal() {
