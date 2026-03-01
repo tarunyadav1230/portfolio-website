@@ -22,7 +22,7 @@
         <p>Aspiring Web Developer</p>
     </header>
 
-    <section id="about">
+    <section id="about" class="reveal">
         <h2>About Me</h2>
         <p>I am learning Git, GitHub, and Web Development.</p>
     </section>
@@ -69,9 +69,28 @@
     <p>Email: your-mspg1456@gmail.com</p>
     <a href="mailto:your-mspg1456@gmail.com" class="btn">Contact Me</a>
 </section>
+<script>
+    function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            var elementVisible = 100;
+
+            if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active");
+            }
+        }
+    }
+
+    window.addEventListener("scroll", reveal);
+    reveal();
+</script>
     <footer>
         <p>© 2026 Tarun Yadav</p>
     </footer>
 
 </body>
+
 </html>
