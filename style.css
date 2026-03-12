@@ -240,3 +240,14 @@ body.light .skills span {
 body.light footer {
     background: rgba(255, 255, 255, 0.6);
 }
+.linkedin-btn{
+background:#0077b5;
+color:white;
+padding:10px 15px;
+text-decoration:none;
+border-radius:5px;
+}
+
+.linkedin-btn:hover{
+background:#005582;
+}
