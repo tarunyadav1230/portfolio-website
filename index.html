@@ -23,7 +23,8 @@
     <header>
         <img src="profile.jpg" alt="Tarun Yadav" class="profile-pic">
         <h1>Hi, I'm Tarun Yadav 👋</h1>
-        <p>Aspiring Frontend Developer | JavaScript | API Integration</p>
+
+        <p id="typing"></p>
     </header>
 
     <!-- About -->
@@ -86,6 +87,12 @@
             <span>API Integration</span>
         </div>
     </section>
+    <section id="github">
+<h2>GitHub Stats</h2>
+
+<img src="https://github-readme-stats.vercel.app/api?username=tarunyadav1230&show_icons=true&theme=tokyonight">
+
+</section>
 
     <!-- Contact -->
     <section id="contact" class="reveal">
@@ -140,8 +147,23 @@
             toggleBtn.textContent = "🌙";
         }
     });
+    const text = "Aspiring Frontend Developer | JavaScript | API Integration";
+let i = 0;
+
+function typing() {
+  if (i < text.length) {
+    document.getElementById("typing").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typing, 80);
+  }
+}
+
+typing();
+function topFunction() {
+  window.scrollTo({top: 0, behavior: "smooth"});
+}
     </script>
     <p>GitHub test update</p>
-
+<button onclick="topFunction()" id="topBtn">⬆</button>
 </body>
 </html>
